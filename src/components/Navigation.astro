@@ -1,0 +1,60 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a href="./src/pages/index.astro"
+      ><img alt="logo pmfr" src="./logos/PPlus_FR_V_DiXaR.png" width="100" /></a
+    >
+
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="./src/pages/index.astro">Accueil</a>
+
+      <a class="navbar-item" href="./src/pages/communaute.astro">Communauté</a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">Plus</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="./src/pages/tutoriels.astro">Tutoriels</a>
+          <a class="navbar-item" href="./src/pages/vods.astro">VODs</a>
+          <a class="navbar-item" href="./src/pages/association.astro">L'association</a>
+          <!-- <hr class="navbar-divider" /> -->
+          <!-- <a class="navbar-item">P+ / PM</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // or jquery ? to standardize on a js scripting style
+  document.addEventListener("DOMContentLoaded", () => {
+    const $navbarBurgers = Array.prototype.slice.call(
+      document.querySelectorAll(".navbar-burger"),
+      0,
+    );
+
+    $navbarBurgers.forEach((el) => {
+      el.addEventListener("click", () => {
+        const target = el.dataset.target;
+        const $target = document.getElementById(target)!;
+
+        el.classList.toggle("is-active");
+        $target.classList.toggle("is-active");
+      });
+    });
+  }
+  );
+</script>

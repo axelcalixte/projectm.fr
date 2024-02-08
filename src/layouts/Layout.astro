@@ -1,0 +1,54 @@
+---
+import Navigation from "../components/Navigation.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <Navigation />
+      <slot />
+      
+    </main>
+  </body>
+  
+  <style is:global>
+    :root {
+      /* variables */
+    }
+    html {
+      font-family: system-ui, sans-serif;
+      background: #13151a;
+    }
+    code {
+      font-family: monospace;
+    }
+    main {
+      margin: auto;
+      padding: 1rem;
+      color: white;
+      /* width: 800px; */
+      max-width: calc(100% - 2rem);
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+  </style>
+</html>
