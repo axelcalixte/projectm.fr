@@ -19,17 +19,17 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="./src/pages/index.astro">Accueil</a>
+      <a class="navbar-item" href="/">Accueil</a>
 
-      <a class="navbar-item" href="./src/pages/communaute.astro">Communauté</a>
+      <a class="navbar-item" href="/communaute">Communauté</a>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">Plus</a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="./src/pages/tutoriels.astro">Tutoriels</a>
-          <a class="navbar-item" href="./src/pages/vods.astro">VODs</a>
-          <a class="navbar-item" href="./src/pages/association.astro">L'association</a>
+          <a class="navbar-item" href="/tutoriels">Tutoriels</a>
+          <a class="navbar-item" href="/vods">VODs</a>
+          <a class="navbar-item" href="/association">L'association</a>
           <!-- <hr class="navbar-divider" /> -->
           <!-- <a class="navbar-item">P+ / PM</a> -->
         </div>
@@ -55,6 +55,5 @@
         $target.classList.toggle("is-active");
       });
     });
-  }
-  );
+  })
 </script>
