@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.4.1",
-    "astro": "^4.4.4",
-    "bulma": "^0.9.4",
+    "@astrojs/check": "^0.5.10",
+    "astro": "^4.5.9",
+    "bulma": "^1.0.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
